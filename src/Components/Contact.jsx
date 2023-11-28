@@ -181,7 +181,7 @@ const Contact = () => {
                         <div class="info-content">
                           <h6 class="title">Phone No.</h6>
                           <p>
-                            <a href="tel:7722073406">(+91) 7722073406</a>
+                            <a href="tel:9168007001">(+91) 9168007001</a>
                           </p>
                         </div>
                       </div>
