@@ -163,7 +163,7 @@ const Footer = () => {
                       <p>
                         {" "}
                         <i class="bi bi-telephone-fill mx-2"></i>{" "}
-                        <a href="tel:7722073406">(+91) 7722073406</a>{" "}
+                        <a href="tel:9168007001">(+91) 9168007001</a>{" "}
                       </p>
                     </div>
                     <ul class="widget-social">
