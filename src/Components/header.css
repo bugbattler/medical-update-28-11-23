@@ -1,0 +1,122 @@
+.navbar {
+  padding: 0 !important;
+  /* top: -20px; */
+  margin: 10px 50px !important;
+  border-radius: 10px;
+  background-color: #e7f8ee !important;
+  /* border: 0.7px solid #a0d3b4; */
+}
+
+.nav-nav {
+  padding: 10px;
+}
+.navbar-collapse{
+  /* border: 0.7px solid #a0d3b4;
+  padding: 30px 0px 30px 0px ;
+  border-radius: 10px; */
+}
+
+.all-links {
+  gap: 1.6rem;
+  /* margin-left: 20px; */
+  /* border: 0.7px solid #a0d3b4;
+  padding: 20px 0px 20px 0px ;
+  border-radius: 10px; */
+}
+
+.navbar-item {
+  padding-left: 300px;
+}
+
+.nav-link {
+  font-size: 19px !important;
+}
+
+.nav-link:hover {
+  color: #20c997 !important;
+  /* border-bottom: 2px solid #5bb37c; */
+}
+
+.service-text {
+  font-size: 20px !important;
+  margin-top: 13px;
+}
+
+.logo {
+  height: 85px;
+  padding-left: 10px;
+}
+
+.dropdown-menu {
+  font-size: 13px;
+  width: 212px;
+  box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none !important;
+}
+
+.dropdown-menu li {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  animation: mymove 3s;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  backdrop-filter: blur(5px);
+  overscroll-behavior: unset;
+}
+@media only screen and (min-width: 375px) and (max-width: 576px) {
+  .logo {
+    height: 60px;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .show > .nav-link {
+    color: #20c997;
+  }
+  .navbar {
+    background-color: #fff !important;
+    margin: 25px 0 0 20px !important;
+  }
+
+  .all-links {
+    padding-top: 20px;
+    transform: translate(20%, 0%);
+  }
+
+  .all-links:before {
+    text-decoration: underline;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 86% !important;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: mymove 3s;
+    animation-timing-function: ease-in-out;
+    overflow: hidden;
+  }
+}

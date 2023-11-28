@@ -1,0 +1,101 @@
+.services-content {
+  background-color: #fff;
+}
+
+.medical-img-2 {
+  height: 270px;
+  border-radius: 20px;
+}
+
+.services-page {
+  height: 60vh;
+}
+
+.arrow {
+  height: 18px;
+}
+
+.text {
+  padding-top: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.text-two-2 {
+  line-height: 1.8;
+  padding-top: 10px;
+  font-size: 19px;
+}
+
+.text-two-3 {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.text-all {
+  padding-top: 20px;
+}
+
+.all-services-card {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.card-standerd {
+  background-color: #309255;
+  /* width: 90%; */
+  /* height: 30vh; */
+  padding: 20px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.all-content {
+  padding: 40px;
+}
+
+.texttt {
+  line-height: 2;
+  font-size: 19.3px;
+  /* padding-top: 10px; */
+}
+
+.title-1 {
+  color: #309255;
+  position: relative;
+}
+
+.text-one {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 667px) {
+  .my-course {
+    height: 19vh;
+  }
+
+  .all-content {
+    padding: 20px;
+  }
+
+  .services-page {
+    margin: 20px 0 0 20px;
+    height: 25vh;
+  }
+}

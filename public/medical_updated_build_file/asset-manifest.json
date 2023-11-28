@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e4f93ac7.css",
+    "main.js": "/static/js/main.cb081366.js",
+    "static/js/787.ef308c1a.chunk.js": "/static/js/787.ef308c1a.chunk.js",
+    "static/media/slider_1.png": "/static/media/slider_1.a3bef70d0fbfd7942fe5.png",
+    "static/media/medical_logo.png": "/static/media/medical_logo.af492f14a9050f15697f.png",
+    "static/media/about.jpg": "/static/media/about.6464af9753bca50729f1.jpg",
+    "static/media/Medical_Science_Courses.jpg": "/static/media/Medical_Science_Courses.69d9ea60f50dee22e6a4.jpg",
+    "static/media/services_page_bannerr.jpg": "/static/media/services_page_bannerr.6fe74d3f1c3a66663a7c.jpg",
+    "static/media/courses_01.jpg": "/static/media/courses_01.bd6c6b9736a3e6a288ae.jpg",
+    "static/media/courses_03.jpg": "/static/media/courses_03.1b9311491efdebca19d0.jpg",
+    "static/media/courses_02.jpg": "/static/media/courses_02.7bf51b7140990b07f347.jpg",
+    "static/media/courses_06.jpg": "/static/media/courses_06.ae37fb67fa716d3c1df1.jpg",
+    "static/media/courses_05.jpg": "/static/media/courses_05.7050fe56c9b57eaeb24e.jpg",
+    "static/media/courses_04.jpg": "/static/media/courses_04.786644a4d408e464124d.jpg",
+    "static/media/shape_24.png": "/static/media/shape_24.bd7e1d6b6a4159060acd.png",
+    "index.html": "/index.html",
+    "static/media/shape_013.svg": "/static/media/shape_013.caf3d88919d0f682fdb4ca172077b6bb.svg",
+    "main.e4f93ac7.css.map": "/static/css/main.e4f93ac7.css.map",
+    "main.cb081366.js.map": "/static/js/main.cb081366.js.map",
+    "787.ef308c1a.chunk.js.map": "/static/js/787.ef308c1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4f93ac7.css",
+    "static/js/main.cb081366.js"
+  ]
+}

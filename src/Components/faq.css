@@ -1,0 +1,36 @@
+.faq-area {
+
+    background-color: #fff;
+
+}
+
+.faq-text {
+    font-size: 18px;
+}
+
+.faq-btn {
+    margin-top: 50px;
+}
+
+.shape_23 {
+    transform: translate(-65%, -25%);
+}
+
+.shape-icon-box .box-content {
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    border: 2px solid rgba(48, 146, 85, 0.2);
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    top: 270px;
+}
+
+.icon-shape-1{
+    position: absolute;
+    height:50px;
+    top:250px;
+    right: 430px;
+}

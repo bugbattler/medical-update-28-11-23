@@ -1,0 +1,268 @@
+import React, { useEffect, useState } from "react";
+import "./header.css";
+import facebooks from "../images/facebooks.png";
+import twitter from "../images/twitter.png";
+import skype from "../images/skype.png";
+import instagram from "../images/instagram.png";
+import medical_logo from "../images/medical_logo.png";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
+const Header = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [data, setData] = useState({
+    fname: "",
+    email: "",
+    phone: "",
+  });
+  const handleInput = (e) => {
+    const newObj = { ...formValue, [e.target.name]: e.target.value };
+    setFormValue(newObj);
+  };
+  const [showModal, setshowModal] = useState(false);
+  const [hidebtn, sethidebtn] = useState(false);
+
+  const [formValue, setFormValue] = useState(data);
+  const [errors, setErrors] = useState(false);
+  const handleEnquiryForm = (e) => {
+    e.preventDefault();
+    setErrors(Validation(formValue));
+    console.log(data);
+    console.log("ok");
+    if (data.fname !== "" && data.email !== "" && data.phone !== "") {
+      axios
+        .post("https://medical-cdt6.onrender.com/api/Contact/create", data)
+        .then((response) => {
+          const contact = response.data;
+          localStorage.setItem('Contact', JSON.stringify(contact));
+          alert("Form Submitted");
+          setshowModal(false);
+        })
+        .catch((error) => {
+          console.error("", error);
+        });
+    }
+  };
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const closeCollapse = () => {
+    setIsCollapsed(true);
+  };
+
+  const Validation = (values) => {
+    const errors = {};
+    const regex =
+      "^[a-zA-Z0-9]+(?:.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:.[a-zA-Z0-9]+)*$";
+    if (!values.fname) {
+      errors.fname = "Name field is required ";
+      setErrors(true);
+    } else if (!formValue.fname.replace == "") {
+      errors.fname = " Empty field are not allowed";
+    }
+    if (!values.email) {
+      errors.email = "Email feild is required";
+      setErrors(true);
+    } else if (!formValue.email == "") {
+      errors.name = " Empty field are not allowed";
+    }
+    if (!values.phoneNo) {
+      errors.phone = "Phone number is required ";
+      setErrors(true);
+    } else if (values.phoneNo.length < 11) {
+      errors.phone = "Phone number must be 10 digit  ";
+      setErrors(true);
+    } else if (!formValue.phoneNo == "") {
+      errors.name = "Empty field are not allowed";
+    }
+
+    return errors;
+  };
+
+  const triggerModalButton = () => {
+    const button = document.querySelector(".btn-primary");
+    if (button) {
+      console.log("ok");
+      button.click(); // Simulate a click event on the button
+    }
+  };
+  useEffect(() => {
+    // Delay the button click by 6 seconds (6000 milliseconds)
+    const delay = 6000;
+    let timeoutId = ""
+    const storedUser = JSON.parse(localStorage.getItem('Contact'));
+    console.log(94, storedUser);
+    if (!storedUser) {
+
+      timeoutId = setTimeout(triggerModalButton, delay);
+    } else {
+      console.log("Achived")
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+  return (
+    <>
+      <div class="header-top d-none d-lg-block headdderr">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-top-medal">
+              <div class="top-info">
+                <p>
+                  <i class="bi bi-telephone-fill"></i>{" "}
+                  <a href="tel:7722073406">Contact - (+91) 7722073406</a>
+                </p>
+                <p>
+                  <i class="bi bi-envelope-open-fill"></i>{" "}
+                  <a href="mailto:Medicalcoding@gmail.com">
+                    Email Id - Medicalcoding@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="header-top-right">
+              <ul class="social">
+                <li>
+                  <a href="#">
+                    <img className="icons" src={facebooks} />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img className="icons" src={twitter} />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img className="icons" src={skype} />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img className="icons" src={instagram} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid nav-nav">
+          <img className="logo m-0" src={medical_logo} alt="Logo" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="true"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`}
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav all-links mx-auto">
+              <li class="nav-item">
+                <Link
+                  class="nav-link pe-auto"
+                  to="/"
+                  style={{ cursor: "pointer", color: "#343a40" }}
+                  onClick={toggleCollapse}
+                  area-expanded={!isCollapsed}
+                >
+                  Home
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  class="nav-link "
+                  to="/about"
+                  style={{ cursor: "pointer", color: "#343a40" }}
+                  onClick={toggleCollapse}
+                  area-expanded={!isCollapsed}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  class="nav-link "
+                  to="/faq"
+                  style={{ cursor: "pointer", color: "#343a40" }}
+                  onClick={toggleCollapse}
+                  area-expanded={!isCollapsed}
+                >
+                  FAQ's
+                </Link>
+              </li>
+
+              <li class="service-text dropdown ">
+                <a
+                  class=""
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ fontSize: 19, color: "#343a40" }}
+                >
+                  Courses
+                </a>
+                <ul class="dropdown-menu sub-menu">
+                  <li>
+                    <Link
+                      to="/medical-codding-classes"
+                      onClick={toggleCollapse}
+                      area-expanded={!isCollapsed}
+                    >
+                      Medical Coding Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/online-medical-codding-classes"
+                      onClick={toggleCollapse}
+                      area-expanded={!isCollapsed}
+                    >
+                      Online Medical Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/courses"
+                      onClick={toggleCollapse}
+                      area-expanded={!isCollapsed}
+                    >
+                      All Courses
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <Link
+                  class="nav-link "
+                  to="/contact"
+                  style={{ cursor: "pointer", color: "#343a40" }}
+                  onClick={toggleCollapse}
+                  area-expanded={!isCollapsed}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export default Header;
