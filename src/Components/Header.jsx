@@ -382,7 +382,7 @@ const Header = () => {
                             <div className="top-info">
                                 <p>
                                     <i className="bi bi-telephone-fill"></i>{" "}
-                                    <a href="tel:7722073406">Contact - (+91) 7722073406</a>
+                                    <a href="tel:9168007001">Contact - (+91) 9168007001</a>
                                 </p>
                                 <p>
                                     <i className="bi bi-envelope-open-fill"></i>{" "}
