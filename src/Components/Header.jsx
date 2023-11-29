@@ -539,9 +539,9 @@ const Header = () => {
                                 </Link>
                             </li>
 
-                            <li className="service-text dropdown ">
+                            <li className="nav-item dropdown ">
                                 <a
-                                    className=""
+                                    className="nav-link"
                                     href="#"
                                     role="button"
                                     data-bs-toggle="dropdown"
